@@ -38,6 +38,7 @@ module.exports = function (grunt) {
       },
       development: {
         options: {
+          dir: '/',
           remote: 'git@github.com:lucasklaassen/soundCribDev.git',
           branch: 'master'
         }
