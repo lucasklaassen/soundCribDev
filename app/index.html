@@ -13,6 +13,17 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/init.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="assets/css/skel.css" />
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="stylesheet" href="assets/css/style-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
   </head>
   <body ng-app="soundCribApp">
     <!--[if lt IE 7]>
@@ -21,7 +32,7 @@
 
     <!-- Header -->
       <header id="header">
-        <a href="#" class="image avatar"><img src="images/logo.png" alt="" /></a>
+        <a href="#" class="image avatar"><img src="assets/images/logo.png" alt="" /></a>
         <h1><strong>SoundCrib</strong>, where good music<br />
         comes together to create experiences<br />
         crafted by <a href="#">People just like you.</a></h1>
@@ -171,7 +182,6 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/skel/src/skel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
