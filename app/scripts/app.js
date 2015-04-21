@@ -15,9 +15,11 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'plangular'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, plangularConfigProvider) {
+    plangularConfigProvider.clientId = 'bc5a4908b1f2c9eb5d1a31bc80dc6614';
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
