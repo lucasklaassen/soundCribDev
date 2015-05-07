@@ -13,9 +13,6 @@
     <span ng-click="artist.active = false" class="closer"></span>
     <div plangular="{{artist.url}}" class="soundCribPlayer mb3 bg-darken-2 rounded">
       <div class="p2">
-        <div class="flex flex-center">
-          <samp class="h6">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
-        </div>
         <h3 class="h1 caps mt0">{{playlist.title}}</h3>
         <div class="flex flex-center">
           <button class="flex-none h3 action-button button-narrow button-transparent button-grow rounded"
@@ -43,17 +40,20 @@
         </div>
       </div>
       <ul class="list-reset">
-        <li ng-repeat="track in tracks">
+        <li class="overlay-track" ng-repeat="track in tracks">
           <button
             class="flex flex-center full-width left-align track-button button-transparent"
             title="Play {{track.title}}"
             ng-class="{'is-active': player.playing === track.src }"
             ng-click="playPause($index)">
-            <span class="custom-flex-auto">
-              {{track.user.username}} - {{track.title}}
-            </span>
-            <span class="h6">
+            <span class="trackDuration">
               {{ track.duration / 1000 | hhmmss }}
+            </span>
+            <span class="trackTitle">
+              {{track.title}}
+            </span>
+            <span class="trackArtist">
+              {{track.user.username}}
             </span>
           </button>
         </li>
