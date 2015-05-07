@@ -128,17 +128,39 @@
 .playerHead {
 }
 
-.trackList {
-  .trackItem {
-    span {
-      font-size:1.2em;
-    }
+.track-progress-bar {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 2px;
+  top:0;
+  left:0;
+  margin-bottom: 0.5em;
+  .play-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    top:0;
+    left:0;
+    height:2px;
   }
+}
+
+.trackItem {
+  margin-bottom: 0.5em;
+}
+
+.trackList {
   .trackTitle {
     float:left;
+    max-width: 250px;
+    font-size:1.3em;
+  }
+  .trackArtist {
+    float:left;
+    clear:left;
+    padding: 5px 0;
   }
   .trackDuration {
     float:right;
+    font-size: 1.1em;
+    line-height: 1.6em;
   }
 }
 
@@ -150,16 +172,22 @@
   }
 }
 
+.trackItem {
+  .show-progress {
+    display: block !important;
+  }
+  .play-bg {
+    display: none;
+  }
+}
+
 .progressContainer {
   progress {
+    display:block;
     width: 62%;
     float: left;
     margin: 1rem 2%;
   }
-}
-
-.soundCribPlayer {
-
 }
 
 .flex-center {
@@ -169,7 +197,6 @@
 .track-button {
   width: 100%;
   text-align: left;
-  height: 3em;
 }
 
 input[type="submit"],

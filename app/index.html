@@ -32,9 +32,7 @@
     <!-- Header -->
       <header id="header">
         <a href="#" class="image avatar"><img src="assets/images/logo.png" alt="" /></a>
-        <h1><strong>SoundCrib</strong>, where good music<br />
-        comes together to create experiences<br />
-        crafted by <a href="#">People just like you.</a></h1>
+        <h1><strong>SoundCrib</strong></h1>
       </header>
 
     <!-- Main -->
@@ -52,16 +50,26 @@
             </div>
             <ul class="list-reset trackList">
               <li class="trackItem" ng-repeat="track in tracks">
+                <div class="track-progress-bar">
+                  <div
+                  ng-class="{'show-progress': player.playing === track.src }"
+                  style="width:{{currentTime / duration * 100 || 0}}%"
+                  class="play-bg">
+                  </div>
+                </div>
                 <button
                   class="flex flex-center full-width left-align track-button button-transparent"
                   title="Play {{track.title}}"
                   ng-class="{'is-active': player.playing === track.src }"
                   ng-click="playPause($index)">
-                  <span class="custom-flex-auto trackTitle">
-                    {{track.user.username}} - {{track.title}}
-                  </span>
-                  <span class="h6 trackDuration">
+                  <span class="trackDuration">
                     {{ track.duration / 1000 | hhmmss }}
+                  </span>
+                  <span class="trackTitle">
+                    {{track.title}}
+                  </span>
+                  <span class="trackArtist">
+                    {{track.user.username}}
                   </span>
                 </button>
               </li>
@@ -92,9 +100,6 @@
                   ng-value="currentTime / duration || 0">
                   {{ currentTime / duration }}
                 </progress>
-              </div>
-              <div class="durationContainer">
-                <samp class="h6">{{ currentTime | hhmmss }} / {{ duration | hhmmss }}</samp>
               </div>
             </div>
           </div>
