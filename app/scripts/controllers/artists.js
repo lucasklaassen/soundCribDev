@@ -2,24 +2,13 @@
 
 /**
  * @ngdoc function
- * @name soundCribApp.controller:MainCtrl
+ * @name soundCribApp.controller:ArtistsCtrl
  * @description
- * # MainCtrl
+ * # ArtistsCtrl
  * Controller of the soundCribApp
  */
 angular.module('soundCribApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.mixes = [
-      {
-        name:'SoundCrib Mix #1', url:'http://soundcloud.com/soundcrib/sets/soundcrib', active: false, defaultMix: false
-      },
-      {
-        name:'SoundCrib Mix #2', url:'http://soundcloud.com/soundcrib/sets/soundcrib-mix-2', active: true, defaultMix: true
-      }
-    ];
-    $scope.filterDefault = function(mix) {
-      return mix.defaultMix !== true;
-    };
+  .controller('ArtistsCtrl', function ($scope) {
     $scope.artists = [
       {
         name:'A$AP Rocky', url:'https://soundcloud.com/asap-rocky/sets/liveloveasap', imgURL:'assets/images/artists/asap-rocky.jpg', active: false

@@ -1,0 +1,4 @@
+- Call API controller with playlist parameters
+  - Loop through returned values and setup track links in their respective wrappers
+
+- The goal is to have universal controls (May need to rethink how artist overlays work)
